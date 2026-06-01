@@ -1,0 +1,90 @@
+======================================================================
+K-MEANS CUSTOMER SEGMENTATION - ANALYSIS RESULTS
+Generated: 2026-01-15 20:29:10
+======================================================================
+
+1. DATASET INFORMATION
+----------------------------------------
+Total customers analyzed: 5,878
+Dataset: Online Retail II (UCI)
+
+2. RFM STATISTICS (Original Data)
+----------------------------------------
+           Recency    Frequency       Monetary
+count  5878.000000  5878.000000    5878.000000
+mean    201.331916     6.289384    3018.616737
+std     209.338707    13.009406   14737.731040
+min       1.000000     1.000000       2.950000
+25%      26.000000     1.000000     348.762500
+50%      96.000000     3.000000     898.915000
+75%     380.000000     7.000000    2307.090000
+max     739.000000   398.000000  608821.650000
+
+3. SKEWNESS ANALYSIS
+----------------------------------------
+Initial Skewness (before transformation):
+  Recency: 0.8870
+  Frequency: 12.6367
+  Monetary: 25.3078
+
+Log transformation applied: True
+
+Skewness after log transformation:
+  Recency: -0.4885
+  Frequency: 1.0012
+  Monetary: 0.2650
+
+4. ELBOW METHOD RESULTS
+----------------------------------------
+  k =  2: Inertia = 8,588.81
+  k =  3: Inertia = 6,351.98
+  k =  4: Inertia = 4,918.64
+  k =  5: Inertia = 4,097.83
+  k =  6: Inertia = 3,552.98
+  k =  7: Inertia = 3,184.84
+  k =  8: Inertia = 2,891.60
+  k =  9: Inertia = 2,650.60
+  k = 10: Inertia = 2,455.91
+
+Optimal k (Elbow): 3
+
+5. SILHOUETTE ANALYSIS RESULTS
+----------------------------------------
+  k =  2: Silhouette Score = 0.4381
+  k =  3: Silhouette Score = 0.3478
+  k =  4: Silhouette Score = 0.3653
+  k =  5: Silhouette Score = 0.3421
+  k =  6: Silhouette Score = 0.3336
+  k =  7: Silhouette Score = 0.3052
+  k =  8: Silhouette Score = 0.2970
+  k =  9: Silhouette Score = 0.2913
+  k = 10: Silhouette Score = 0.2918
+
+Optimal k (Silhouette): 2
+
+6. FINAL MODEL
+----------------------------------------
+Selected k: 2
+Final Silhouette Score: 0.4381
+Final Inertia: 8,588.81
+
+7. CLUSTER INTERPRETATION
+----------------------------------------
+ Cluster  Count  Recency_Mean  Frequency_Mean  Monetary_Mean               Interpretation
+       0   2352          51.2            12.6        6619.45 Recent, Frequent, High-value
+       1   3526         301.5             2.1         616.70         Old, Rare, Low-value
+
+8. PCA ANALYSIS
+----------------------------------------
+Components: 2
+  PC1: 0.7637 (76.37%)
+  PC2: 0.1877 (18.77%)
+  Total variance explained: 95.14%
+
+9. EXECUTION TIME
+----------------------------------------
+Total time: 96.35 seconds
+
+======================================================================
+END OF REPORT
+======================================================================

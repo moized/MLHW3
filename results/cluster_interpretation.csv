@@ -1,0 +1,3 @@
+Cluster,Count,Recency_Mean,Frequency_Mean,Monetary_Mean,Interpretation
+0,2352,51.2,12.6,6619.45,"Recent, Frequent, High-value"
+1,3526,301.5,2.1,616.7,"Old, Rare, Low-value"
