@@ -29,6 +29,5 @@ covid1/
 *.exe
 
 # Generated reports
-*.html
 duzenle_mlhw3.py
 reports/customer_segmentation_report.pdf
