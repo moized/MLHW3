@@ -5,6 +5,11 @@ __pycache__/
 .pytest_cache/
 .ipynb_checkpoints/
 
+# Security and Configurations
+.env
+.vscode/
+.idea/
+
 # Local runtimes
 jdk-17/
 
