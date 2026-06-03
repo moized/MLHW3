@@ -1,62 +1,25 @@
-# K-Means Customer Segmentation
+# 📈 Retail Customer Segmentation using RFM & K-Means Clustering
 
-Machine learning homework project for customer segmentation using RFM features and k-Means clustering on the Online Retail II dataset.
+## 📌 Overview
+This project delivers an end-to-end unsupervised machine learning pipeline to segment retail customers based on their historical transaction patterns. By extracting **RFM (Recency, Frequency, Monetary)** metrics from large-scale e-commerce sheets, the framework cleans data, handles outliers, optimizes cluster thresholds, and projects high-dimensional matrices onto interpretable interfaces using **PCA (Principal Component Analysis)**.
 
-## Overview
+---
 
-The project builds customer segments from transaction data using:
-
-- RFM feature engineering: Recency, Frequency, and Monetary value
-- Skewness analysis and log transformation
-- Standardization before clustering
-- Elbow and silhouette analysis for selecting `k`
-- PCA-based visualization of customer clusters
-
-## Project Structure
+## 📁 Project Structure
+The repository is engineered into a modular, production-ready machine learning framework following clean software engineering practices:
 
 ```text
-.
-├── train.py              # Runs the full training and clustering pipeline
-├── eval.py               # Evaluates and summarizes generated segments
-├── dataset.py            # Loads data and builds RFM features
-├── preprocessing.py      # Handles transformations and scaling
-├── clustering.py         # k-Means and cluster selection utilities
-├── utils.py              # Plotting and output helpers
-├── generate_report.py    # Generates the project report
-├── requirements.txt      # Python dependencies
-└── results/              # Generated metrics, plots, and segment outputs
-```
-
-## Setup
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-Place the Online Retail II dataset at:
-
-```text
-dataset/online_retail_II.xlsx
-```
-
-Dataset source: https://archive.ics.uci.edu/dataset/502/online+retail+ii
-
-## Usage
-
-Run the full analysis:
-
-```bash
-python train.py
-```
-
-Evaluate the generated clusters:
-
-```bash
-python eval.py
-```
-
-## Author
-
-Mohammed Izedin Mohammed
+MLHW3/
+├── data/              # Raw transaction sheets (online_retail_II.xlsx)
+├── src/               # Core analytical Python modules
+│   ├── train.py       # Runs the full training and clustering pipeline
+│   ├── eval.py        # Evaluates and summarizes generated segments
+│   ├── dataset.py     # Loads data and builds RFM features
+│   ├── preprocessing.py # Handles transformations and scaling
+│   ├── clustering.py  # k-Means and cluster selection utilities
+│   ├── utils.py       # Plotting and output helpers
+│   └── generate_report.py # Generates the project report asset
+├── reports/           # Business intelligence outputs and data visualization models
+│   ├── customer_segmentation_report.html  # Main high-fidelity analytical report
+│   └── figures/       # Elbow curves, Silhouette profiles, and PCA cluster maps
+└── requirements.txt   # Python dependencies
