@@ -1,17 +1,27 @@
-# Ağır kütüphaneler ve sanal ortamlar engelleniyor
+# Local environments and caches
 .venv/
 bdv_env/
 __pycache__/
 .pytest_cache/
 .ipynb_checkpoints/
+
+# Local runtimes
 jdk-17/
-data/
+
+# Datasets and external data
 dataset/
+data/
+
+# Generated/temporary project folders
 covid/
 covid1/
+
+# Archives and binaries
 *.zip
 *.rar
 *.tar.gz
 *.7z
 *.exe
+
+# Generated reports
 *.html
